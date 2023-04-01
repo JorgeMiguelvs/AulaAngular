@@ -1,0 +1,16 @@
+<h1>Exercício 5</h1>
+
+Digite um n° <input [(ngModel)]="numero1" type="number" name="" id=""> <br><br>
+Digite outro n° <input [(ngModel)]="numero2" type="number" name="" id="">
+<br>
+<br>
+<div *ngIf="numero1 && numero2">
+<button (click)="calc('+')">+</button> -
+<button (click)="calc('-')">-</button> -
+<button (click)="calc('*')">*</button> -
+<button (click)="calc('/')">/</button>
+</div>
+<br>
+<br>
+<h3>Resultado: {{res}}</h3>
+
