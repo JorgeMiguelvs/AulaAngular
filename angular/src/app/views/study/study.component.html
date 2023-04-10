@@ -1,0 +1,46 @@
+<p>{{somar(10,19)}}</p>
+
+<hr>
+
+<div> musica: {{musica}}</div>
+<div> autor: {{autor}}</div>
+<div> album: {{album}}</div>
+
+<hr>
+
+<p [class]="classeCss"> Texto aleatório </p>
+
+<button (click)="mudarCor()">Mudar a cor</button>
+
+
+<hr>
+
+{{nome +' '+sobrenome}}
+
+<hr>
+
+<div>{{maisculo('carnaval')}}</div>
+
+<hr>
+
+<h1 class="pais">{{maisculo('alemanha')}}</h1>
+
+<hr>
+
+<img class="img" src="imagem">
+
+<button>Trocar imagem</button>
+
+
+<hr>
+
+<h1 [class]="pais">{{pais | uppercase}}</h1>
+<button (click)="mudarPais()">Trocar de pais</button>
+
+<hr>
+
+<img class="img" [src]="imagem">
+
+<button (click)="trocarImg()">Trocar Imagem</button>
+
+

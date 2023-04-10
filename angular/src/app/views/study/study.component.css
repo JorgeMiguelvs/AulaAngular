@@ -1,0 +1,31 @@
+.vermelho {
+    background-color: red;
+    color: white;
+}
+
+.azul {
+    background-color: blue;
+    color: green;
+}
+
+
+.pais {
+    color: red;
+    background-color: yellow;
+    border-color: black;
+    }
+
+
+    .alemanha{
+        color:orange;
+        font-weight: bold;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+    
+      .brasil {
+        color: rgb(251, 255, 0);
+        font-style: italic;
+        background-color: blue;
+        border: 1px solid green;
+      }
