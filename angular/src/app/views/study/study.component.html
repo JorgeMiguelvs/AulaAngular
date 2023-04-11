@@ -4,7 +4,8 @@
 
 <div> musica: {{musica | uppercase}}</div>
 <div> autor: {{autor | uppercase}}</div>
-<div> album: {{album | uppercase}}</div>
+<div> album: {{album | uppercase
+    }}</div>
 
 <hr>
 
@@ -24,12 +25,6 @@
 <hr>
 
 <h1 class="pais">{{maisculo('alemanha')}}</h1>
-
-<hr>
-
-<img class="img" src="imagem">
-
-<button>Trocar imagem</button>
 
 
 <hr>
@@ -114,6 +109,148 @@ Digite seu nome: <input type="text" [(ngModel)]="exemplonome" >--
 <span>{{exemplonome | uppercase}}</span>
 
 --<button (click)="mudarNome()">Mudar Nome</button>
+
+<hr>
+
+<h5>calculadora</h5>
+Valor 1
+<input type="number" [(ngModel)]="valor1"> <span>{{valor1}}</span>
+Valor 2
+<input type="number" [(ngModel)]="valor2"><span>{{valor2}}</span><br>
+
+<input *ngIf=" valor1 or valor2 !=''" (click)="operacao('+') " type="radio" value="+" [(ngModel)]="operacao" >
+    <label for="gen-masc">+</label>
+    <input  *ngIf=" valor1 or valor2 !=''" (click)="operacao('-') "  type="radio" value="-"  [(ngModel)]="operacao" >
+    <label for="gen-fem">-</label>
+    <input *ngIf=" valor1 or valor2 !=''" (click)="operacao('*') "  type="radio" value="*"  [(ngModel)]="operacao" >
+    <label for="gen-out">*</label>
+    <input *ngIf=" valor1 or valor2 !=''" (click)="operacao('/') "  type="radio" value="/"  [(ngModel)]="operacao" >
+    <label for="gen-out">/</label><br>
+
+Resultado:<input type="text"[(ngModel)]="resultado">
+
+
+<hr>
+
+<h5>exemplo do slide</h5>
+exemplo 1
+<input type="text" [(ngModel)]="nomeexemplo2">
+<p *ngIf="nomeexemplo2">
+Nome: {{nomeexemplo2}}
+</p>
+
+<hr>
+<h5>sumir div</h5>
+<button (click)="sumirDiv()">Botão Sumir Div</button>  
+<div *ngIf="botao" class="sumir">
+ 
+</div>
+
+<hr>
+<h5>digitou</h5>
+<input [(ngModel)]="digitou">
+
+<img *ngIf="digitou" width="100px"src='assets/img1.jpg'>
+
+<hr>
+
+<input  type="number" [(ngModel)]="numero">
+<div *ngIf="numero>0">numero positivo</div>
+<div *ngIf="numero<0">numero negativo</div>
+<div *ngIf="numero==0">numero igual a 0</div>
+
+<hr>
+
+<select [(ngModel)]="campo">
+    <option value="zap">WhatsApp</option>
+    <option value="email">E-mail</option>
+</select><br>
+<br>
+<input *ngIf="campo=='zap'" type="number"  placeholder="WhatsApp">
+<input *ngIf="campo=='email'" type="mail" placeholder="E-mail">
+
+<hr>
+
+<!-- lista1 - ngIf -->
+<h5>concatenação de nome e sobrenome</h5>
+Nome:<input type="text" [(ngModel)]="nomeAparecer"><br>
+Sobrenome:<input type="text" [(ngModel)]="sobrenomeAparecer">
+
+<div *ngIf="nomeAparecer !=='' && sobrenomeAparecer!==''">{{nomeAparecer+' '+sobrenomeAparecer}}</div>
+
+<hr>
+
+<h5>fale um pokemon</h5>
+<input type="text" [(ngModel)]="nomePersonagem">
+<img *ngIf="nomePersonagem !== perso1 || perso2 || perso3" src="{{'assets/' + nomePersonagem + '.png'}}">
+<p>{{nomePersonagem}}</p>
+
+<hr>
+
+<h5>contador de caractere</h5>
+<input type="text" [(ngModel)]="contador">
+<div *ngIf="contador !==''">Digitos: {{contagem(contador)}}</div>
+
+<hr>
+<!-- falta terminar -->
+Nome: <input type="text" [(ngModel)]="nomeSocial"><br>
+Nome Usuário: <input type="text" [(ngModel)]="nomeUsuario"><br>
+
+<select name="" id="">
+    <option value="facebook">Facebook</option>
+    <option value="whatsapp">WhatsApp</option>
+    <option value="telegram">Telegram</option>
+</select>
+
+<button>Confirmar</button>
+
+<hr>
+
+<!-- lista ngFor -->
+
+<ul>
+    <li *ngFor="let animal of arrayBichos; let i = index;">{{i}} {{animal}}
+    </li>
+</ul>
+
+<hr>
+
+<div>
+    <p *ngFor="let objetos of arrayObj; let i = index;">{{i}}-{{objetos}}</p>
+</div>
+
+<hr>
+<h5>exemplo</h5>
+<table border="1" >
+    <tr *ngFor="let filme of arrayFilmes; let i = index;">
+    <td>{{filme}}</td>
+    <td>{{arrayNotas[i]}}</td>
+    </tr>
+    </table>
+
+<hr>
+
+<ol>
+    <li *ngFor="let filmes of arrayFilm; ">{{filmes}}</li>
+</ol>
+
+<hr>
+<ul>
+    <li *ngFor="let films of vetorFilme"> {{films}}
+        <img src="assets/{{films}}.jpg">
+    </li>
+    
+</ul>
+
+<hr>
+<!-- falta terminar -->
+<ul>
+    <li *ngFor="let pais of vetorPais"> <a  href=" "> {{pais}}</a>
+    </li>
+    
+</ul>
+
+
 
 
 
