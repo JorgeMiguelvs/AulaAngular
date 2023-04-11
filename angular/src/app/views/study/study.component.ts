@@ -92,4 +92,54 @@ export class StudyComponent {
   }
  }
 
+ //--
+
+ aparecer='';
+
+ //--
+
+ n1='';
+ n2='';
+
+ //--
+
+ dog ='';
+ pincher ='';
+ labrador ='';
+
+
+ //--
+
+ cidade = '';
+
+
+ //--
+
+ email = false;
+contTel = true;
+
+//--
+
+genero = '';
+
+//-- 
+curso='';
+candidato='';
+
+//--
+
+exemplonome = '';
+
+mudarNome()
+{
+  
+    this.exemplonome = 'miguel';
+  
+}
+
+//--
+
+
+
+
 }

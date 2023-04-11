@@ -2,9 +2,9 @@
 
 <hr>
 
-<div> musica: {{musica}}</div>
-<div> autor: {{autor}}</div>
-<div> album: {{album}}</div>
+<div> musica: {{musica | uppercase}}</div>
+<div> autor: {{autor | uppercase}}</div>
+<div> album: {{album | uppercase}}</div>
 
 <hr>
 
@@ -42,5 +42,78 @@
 <img class="img" [src]="imagem">
 
 <button (click)="trocarImg()">Trocar Imagem</button>
+
+<hr>
+<!-- ng  model + interpoalçao -->
+<input type="text" [(ngModel)]="aparecer">
+<p>{{aparecer}}</p>
+
+<hr>
+
+Digite um valor: 
+<input type="number" [(ngModel)]="n1" > <br>
+Digite um valor: 
+<input type="number" [(ngModel)]="n2" >
+
+<p>A soma é: {{n1+n2}}</p>
+
+<hr>
+
+Digite uma raça:
+<input type="text" [(ngModel)]="dog">
+<img src="{{'/assets/'+ dog + '.jpg'}} "alt="">
+
+<hr>
+
+<select [(ngModel)]="cidade">
+    <option value=
+    "saopaulo">São Paulo</option>
+    <option value="santos">Santos</option>
+    <option value="campinas">Campinas</option>
+    <option value=
+    "sorocaba">Sorocaba</option>
+    </select>
+    <p>{{cidade}}</p>
+
+    <hr>
+
+<input id="enviar-email" type="checkbox" [(ngModel)]="email" />
+<label for="enviar-email">Enviar E-mail</label>
+<input id="contato-telefonico" type="checkbox" [(ngModel)]="contTel" />
+<label for="Contato Telfônico">Entrar em Contato por Telefone</label>
+<p>Email: {{email}}</p>
+<p>Telefone: {{contTel}}</p>
+
+<hr>
+
+<p>
+    <input type="radio" value="masc" id="gen-masc" [(ngModel)]="genero" >
+    <label for="gen-masc">Masculino</label>
+    <input type="radio" value="fem" id="gen-fem" [(ngModel)]="genero" >
+    <label for="gen-fem">Feminino</label>
+    <input type="radio" value="out" id="gen-out" [(ngModel)]="genero" >
+    <label for="gen-out">Outro</label>
+    </p>
+    <p>Gênero: {{genero}}</p>
+
+<hr>
+
+Seu nome:<input type="text" [(ngModel)]="candidato" > 
+<br>
+<select [(ngModel)]="curso">
+    <option value="adm">adm</option>
+    <option value="ti">ti</option>
+    <option value="engenharia">engenharia</option>
+    <option value="farmacia">farmacia</option>
+    </select>
+    <p>{{candidato +' '+curso}}</p>
+
+<hr>
+
+Digite seu nome: <input type="text" [(ngModel)]="exemplonome" >--   
+<span>{{exemplonome | uppercase}}</span>
+
+--<button (click)="mudarNome()">Mudar Nome</button>
+
 
 
