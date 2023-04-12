@@ -26,6 +26,40 @@
 
 <h1 class="pais">{{maisculo('alemanha')}}</h1>
 
+<hr>
+<h5></h5>
+<button [class]="corBtn" (click)="mudarCorBtn()">Mudar Cor Butão</button>
+
+<hr>
+
+<div class="texto">
+{{texto}}
+</div>
+
+<hr>
+<!-- Falta terminar -->
+<h5>add texto div</h5>
+<button >Clique Add Text</button>
+
+<hr>
+<!-- Falta terminar -->
+<h5>apertar btn e aparecer nome</h5>
+
+<button (click)="mostrarName()">BOTÃO</button>
+<div>{{aparecerName}}</div>
+
+<hr>
+<h5>Trocar cor botão</h5>
+<div [class]="mudarFundo">.
+</div>
+<button (click)="trocarRed()">Red</button>
+<button (click)="trocarGreen()">Green</button>
+<button (click)="trocarBlue()">Blue</button>
+
+<hr>
+<!-- falta terminar / ngmodel -->
+<input type="text" [(ngModel)]="usuario">
+<button >Click Aqui</button>
 
 <hr>
 
@@ -34,11 +68,19 @@
 
 <hr>
 
-<img class="img" [src]="imagem">
+<img [src]="imagem">
 
 <button (click)="trocarImg()">Trocar Imagem</button>
 
 <hr>
+<h5>aparecer alert pos CLICK IN botão</h5>
+<input type="text" [(ngModel)]="msgUser">
+
+<button (click)="aparecerMsg()">butão</button>
+
+
+<hr>
+
 <!-- ng  model + interpoalçao -->
 <input type="text" [(ngModel)]="aparecer">
 <p>{{aparecer}}</p>
@@ -101,7 +143,7 @@ Seu nome:<input type="text" [(ngModel)]="candidato" >
     <option value="engenharia">engenharia</option>
     <option value="farmacia">farmacia</option>
     </select>
-    <p>{{candidato +' '+curso}}</p>
+    <p *ngIf="candidato !=='' && curso !== ''">{{candidato +' o curso selecionado foi '+curso}}</p>
 
 <hr>
 
@@ -150,7 +192,7 @@ Nome: {{nomeexemplo2}}
 <h5>digitou</h5>
 <input [(ngModel)]="digitou">
 
-<img *ngIf="digitou" width="100px"src='assets/img1.jpg'>
+<img *ngIf="digitou !==''" width="100px"src='assets/img1.jpg'>
 
 <hr>
 
@@ -205,6 +247,17 @@ Nome Usuário: <input type="text" [(ngModel)]="nomeUsuario"><br>
 <button>Confirmar</button>
 
 <hr>
+<h5>Logomarca Select</h5>
+
+<select [(ngModel)]="logomarca">
+    <option value="whatsapp">WhatsApp </option>
+    <option value="facebook">Facebook </option>
+    <option value="telegram">Telegram </option>
+</select>
+
+<img *ngIf="logomarca !=='' "width="30px" src="assets/{{logomarca}}.png">
+
+<hr>
 
 <!-- lista ngFor -->
 
@@ -245,10 +298,12 @@ Nome Usuário: <input type="text" [(ngModel)]="nomeUsuario"><br>
 <hr>
 <!-- falta terminar -->
 <ul>
-    <li *ngFor="let pais of vetorPais"> <a  href=" "> {{pais}}</a>
+    <li *ngFor="let pais of vetorPais"> <button (click)="mostrarPais"> {{pais}}</button>
     </li>
     
 </ul>
+<hr>
+
 
 
 

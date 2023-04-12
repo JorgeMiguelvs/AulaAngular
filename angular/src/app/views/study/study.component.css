@@ -38,3 +38,17 @@
           background-color: red;
         
       }
+
+      .mudarFundo{background-color: gray;}
+
+      .red{
+        background-color: red;
+
+      }
+      .green{
+        background-color: green;
+      }
+
+      .blue{
+        background-color: rgb(33, 33, 209);
+      }

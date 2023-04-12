@@ -33,6 +33,53 @@ export class StudyComponent {
       this.classeCss='vermelho';
     }
     };
+    //--
+    texto='';
+    
+
+    // adicionarTexto(){
+    //   if(this.texto=='')
+    //   {
+    //    return this.texto = 'isso é uma div';
+    //   }
+    // }
+    //--
+
+    corBtn = 'red';
+
+   mudarCorBtn(){
+    if(this.corBtn == 'red') {
+      this.corBtn = 'blue'
+    }
+    else
+    {
+      this.corBtn = 'red'
+    }
+   }
+
+    //--
+    mudarFundo = 'mudarFundo';
+
+    trocarRed(){
+      if(this.mudarFundo == 'mudarFundo')
+      {
+        this.mudarFundo ='red';
+      }
+    }
+
+    trocarGreen(){
+      if(this.mudarFundo == 'mudarFundo')
+      {
+        this.mudarFundo ='green';
+      }
+    }
+
+    trocarBlue(){
+      if(this.mudarFundo == 'mudarFundo')
+      {
+        this.mudarFundo ='blue';
+      }
+    }
 
 
     //--
@@ -68,17 +115,34 @@ export class StudyComponent {
     this.pais='alemanha'
   }
  }
+ //--
+ aparecerName ='Jorge'; // prompt('Qual seu nome?')
 
+ mostrarName()
+ {
+  return this.aparecerName;
+ }
+
+ //--
+
+msgUser='';
+
+aparecerMsg()
+{
+  return alert(this.msgUser);
+}
+ //--
+
+  usuario =''
+
+  mostrarNome(usuario:String)
+  {
+    return usuario.toUpperCase;
+  }
 
  //--
 
  imagem = 'assets/img1.jpg';
-
-
- img12='img';
- img23='img2';
- img34='img3';
- imgN='assets/img1.1.jpg';
 
  trocarImg()
  {
@@ -204,6 +268,9 @@ contagem(contador: string)
 nomeSocial = '';
 nomeUsuario='';
 
+//--
+
+logomarca='';
 
 //--ngFor
 
@@ -220,6 +287,9 @@ vetorFilme = ['batman','hulk','superman'];
 
 vetorPais = ['Brasil','EUA','Espanha','Irlanda'];
 
-
+mostrarPais()
+{
+  return alert(this.vetorPais[1]);
+}
 
 }
