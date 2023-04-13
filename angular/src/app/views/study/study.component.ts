@@ -124,6 +124,21 @@ export class StudyComponent {
  }
 
  //--
+estado = 'sp';
+
+mudarEstado()
+{
+  if(this.estado =='sp')
+  {
+    this.estado='rio';
+  }
+  else{
+    this.estado='sp';
+  }
+}
+
+
+ //--
 
 msgUser='';
 
@@ -156,6 +171,39 @@ aparecerMsg()
   }
  }
 
+ //--
+
+
+ mudouCor='red';
+ passou()
+ {
+  if(this.mudouCor=='red')
+  {
+    this.mudouCor='blue';
+  }
+  else
+  {
+    this.mudouCor='red';
+  }
+ } 
+//--
+
+h1style ='h1';
+ //--
+
+ btnColor = 'blue';
+
+ btnCor()
+{
+  if(this.btnColor == 'blue')
+  {
+    this.btnColor= 'green';
+  }
+  else
+  {
+    this.btnColor='blue';
+  }
+}
  //--
 
  aparecer='';

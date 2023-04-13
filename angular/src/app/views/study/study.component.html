@@ -57,9 +57,30 @@
 <button (click)="trocarBlue()">Blue</button>
 
 <hr>
+
+<h5>Trocar de cor passando o mouse</h5>
+<div [class]="mudouCor" (mouseenter)="passou()">Passa o mouse em mim</div>
+
+
+<hr>
+
+<h5>Trocar de Estado</h5>
+
+<h1 class="estado">{{estado}}</h1>
+<button (click)="mudarEstado()">Button</button>
+
+<hr>
+
+<h1 [class]="h1style">Teste de porperty bindind</h1>
+
+<hr>
 <!-- falta terminar / ngmodel -->
 <input type="text" [(ngModel)]="usuario">
 <button >Click Aqui</button>
+
+<hr>
+
+<button [class]="btnColor" (click)="btnCor()">Muda minha cor ai</button>
 
 <hr>
 

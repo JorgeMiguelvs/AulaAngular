@@ -52,3 +52,23 @@
       .blue{
         background-color: rgb(33, 33, 209);
       }
+
+      .h1{
+        background-color: lightsalmon;
+        font-size: larger;
+        font-family: cursive;
+        border-color: blueviolet;
+      }
+
+
+      .sp{
+        color: red;
+        font-size: xx-large;
+        font-family: cursive;
+      }
+      .rio{
+        color: gold;
+        font-size: xx-large;
+        font-family: cursive;
+      }
+      
