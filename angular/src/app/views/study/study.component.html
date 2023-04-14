@@ -57,7 +57,7 @@
 
 <button (click)="mostrarName()">BOTÃO</button>
 <input [disabled]="disableInput" [(ngModel)]="aparecerName">
-<input type="text" >
+
 
 <hr>
 <!-- 13 -->
@@ -209,7 +209,6 @@ exemplo 1
 <h5>sumir div</h5>
 <button (click)="sumirDiv()">Botão Sumir Div</button>
 <div *ngIf="botao" class="sumir">
-
 </div>
 
 <hr>
@@ -233,7 +232,7 @@ exemplo 1
     <option value="email">E-mail</option>
 </select><br>
 <br>
-<input *ngIf="campo=='zap'" type="number" placeholder="WhatsApp">
+<input *ngIf="campo=='zap'" type="text" placeholder="WhatsApp">
 <input *ngIf="campo=='email'" type="mail" placeholder="E-mail">
 
 <hr>
