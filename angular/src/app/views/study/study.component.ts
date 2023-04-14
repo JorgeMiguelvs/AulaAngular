@@ -6,338 +6,324 @@ import { Component } from '@angular/core';
   styleUrls: ['./study.component.css']
 })
 export class StudyComponent {
- 
-  
-  somar(n1:number,n2:number)
-    {
 
-   return n1+n2
-    }
+  //--1
+  somar(n1: number, n2: number) {
 
+    return n1 + n2
+  }
 
 
-    //--
 
-    musica = 'Meca cereja';
-    autor = 'keyblack';
-    album = 'trap';
+  //--2
 
-    //--
-    classeCss='vermelho';
-    mudarCor(){
-      if (this.classeCss == 'vermelho')
-    {
+  musica = 'Meca cereja';
+  autor = 'Keyblack';
+  album = 'Trap';
+
+  //--3
+  classeCss = 'vermelho';
+  mudarCor() {
+    if (this.classeCss == 'vermelho') {
       this.classeCss = 'azul'
     }
-    else{
-      this.classeCss='vermelho';
+    else {
+      this.classeCss = 'vermelho';
     }
-    };
-    //--
-    texto='';
-    
+  };
 
-    // adicionarTexto(){
-    //   if(this.texto=='')
-    //   {
-    //    return this.texto = 'isso é uma div';
-    //   }
-    // }
-    //--
+  //--4
 
-    corBtn = 'red';
+  nome = 'Jorge';
+  sobrenome = 'Miguel';
 
-   mudarCorBtn(){
-    if(this.corBtn == 'red') {
+  //--5
+
+  maisculo(palavra: String) {
+    return palavra.toUpperCase();
+  }
+
+  //--6
+
+  disableInput = true;
+
+  //--7
+
+  apertou() {
+    alert('apertou');
+  }
+  //--8
+
+  paisC = 'cssPais';
+
+  //--9
+
+  corBtn = 'red';
+
+  mudarCorBtn() {
+    if (this.corBtn == 'red') {
       this.corBtn = 'blue'
     }
-    else
-    {
+    else {
       this.corBtn = 'red'
     }
-   }
-
-    //--
-    mudarFundo = 'mudarFundo';
-
-    trocarRed(){
-      if(this.mudarFundo == 'mudarFundo')
-      {
-        this.mudarFundo ='red';
-      }
-    }
-
-    trocarGreen(){
-      if(this.mudarFundo == 'mudarFundo')
-      {
-        this.mudarFundo ='green';
-      }
-    }
-
-    trocarBlue(){
-      if(this.mudarFundo == 'mudarFundo')
-      {
-        this.mudarFundo ='blue';
-      }
-    }
-
-
-    //--
-
-    nome = 'Jorge';
-    sobrenome = 'Miguel';
-
-    //--
-    
-    maisculo(palavra:String)
-    {
-      return palavra.toUpperCase();
-    }
-
-    //--
-
-    img1='img1';
-    img2='img2';
-    img3='img3';
-
-    //--
-
- pais = 'alemanha';
-
- mudarPais()
- {
-  if(this.pais=='alemanha')
-  {
-    this.pais = 'brasil'
   }
-  else
-  {
-    this.pais='alemanha'
+  //--10
+
+
+  texto = '';
+
+
+  // adicionarTexto(){
+  //   if(this.texto=='')
+  //   {
+  //    return this.texto = 'isso é uma div';
+  //   }
+  // }
+
+  //--12
+  aparecerName = 'Jorge'; // prompt('Qual seu nome?')
+
+  mostrarName() {
+    this.disableInput = !this.disableInput;
+    this.aparecerName = this.aparecerName;
   }
- }
- //--
- aparecerName ='Jorge'; // prompt('Qual seu nome?')
 
- mostrarName()
- {
-  return this.aparecerName;
- }
+  //--13
+  mudarFundo = 'mudarFundo';
 
- //--
-estado = 'sp';
-
-mudarEstado()
-{
-  if(this.estado =='sp')
-  {
-    this.estado='rio';
+  trocarRed() {
+    if (this.mudarFundo == 'mudarFundo') {
+      this.mudarFundo = 'red';
+    }
   }
-  else{
-    this.estado='sp';
+
+  trocarGreen() {
+    if (this.mudarFundo == 'mudarFundo') {
+      this.mudarFundo = 'green';
+    }
   }
-}
+
+  trocarBlue() {
+    if (this.mudarFundo == 'mudarFundo') {
+      this.mudarFundo = 'blue';
+    }
+  }
+
+  //--14
 
 
- //--
+  mudouCor = 'red';
+  passou() {
+    if (this.mudouCor == 'red') {
+      this.mudouCor = 'blue';
+    }
+    else {
+      this.mudouCor = 'red';
+    }
+  }
 
-msgUser='';
+  //--15
+  estado = 'sp';
+  mudarEstado() {
+    if (this.estado == 'sp') {
+      this.estado = 'rio';
+    }
+    else {
+      this.estado = 'sp';
+    }
+  }
 
-aparecerMsg()
-{
-  return alert(this.msgUser);
-}
- //--
+  //--16
 
-  usuario =''
+  h1style = 'h1';
 
-  mostrarNome(usuario:String)
-  {
+  //--17
+
+  usuario = ''
+
+  mostrarNome(usuario: String) {
     return usuario.toUpperCase;
   }
 
- //--
+  //--18
 
- imagem = 'assets/img1.jpg';
+  btnColor = 'blue';
 
- trocarImg()
- {
-  if(this.imagem == 'assets/img1.jpg')
-  {
-    this.imagem = 'assets/img2.jpg'
+  btnCor() {
+    if (this.btnColor == 'blue') {
+      this.btnColor = 'green';
+    }
+    else {
+      this.btnColor = 'blue';
+    }
   }
-  else
-  {
-    this.imagem='assets/img3.jpg'
+
+
+  //--19
+
+  pais = 'brasil';
+
+  mudarPais() {
+    if (this.pais == 'brasil') {
+      this.pais = 'alemanha'
+    }
+    else {
+      this.pais = 'brasil'
+    }
   }
- }
 
- //--
+  //--20
 
+  imagem = 'assets/img1.jpg';
 
- mudouCor='red';
- passou()
- {
-  if(this.mudouCor=='red')
-  {
-    this.mudouCor='blue';
+  trocarImg() {
+    if (this.imagem == 'assets/img1.jpg') {
+      this.imagem = 'assets/img2.jpg'
+    }
+    else {
+      this.imagem = 'assets/img3.jpg'
+    }
   }
-  else
-  {
-    this.mudouCor='red';
-  }
- } 
-//--
 
-h1style ='h1';
- //--
+  //--21
 
- btnColor = 'blue';
+  aparecer = '';
 
- btnCor()
-{
-  if(this.btnColor == 'blue')
-  {
-    this.btnColor= 'green';
-  }
-  else
-  {
-    this.btnColor='blue';
-  }
-}
- //--
+  //--22
 
- aparecer='';
+  n1 = '';
+  n2 = '';
 
- //--
+  //--23
 
- n1='';
- n2='';
+  dog = '';
+  pincher = '';
+  labrador = '';
 
- //--
+  //--24
 
- dog ='';
- pincher ='';
- labrador ='';
+  cidade = '';
 
+  //--25
 
- //--
+  email = false;
+  contTel = true;
 
- cidade = '';
+  //--26
 
+  genero = '';
 
- //--
+  //-- 27
+  curso = '';
+  candidato = '';
 
- email = false;
-contTel = true;
+  //--28
 
-//--
+  exemplonome = '';
 
-genero = '';
+  mudarNome() {
 
-//-- 
-curso='';
-candidato='';
-
-//--
-
-exemplonome = '';
-
-mudarNome()
-{
-  
     this.exemplonome = 'miguel';
-  
-}
 
-//--
-
-valor1 =0;
-valor2 = 0;
-resultado=0;
-
-operacao(op:string){
-  if(op=="+"){
-    this.resultado= this.valor1 + this.valor2;
-  }else if(op=="-"){
-    this.resultado= this.valor1 - this.valor2;
-  }else if(op=="*"){
-    this.resultado= this.valor1 * this.valor2;
-  }else{
-    this.resultado= this.valor1 / this.valor2;
   }
-}
-//--
 
-nomeexemplo2 = '';
+  //--29
 
-//--
-botao =false;
-sumirDiv()
-{
-  this.botao = !this.botao;
-}
+  valor1 = 0;
+  valor2 = 0;
+  resultado = 0;
+
+  operacao(op: string) {
+    if (op == "+") {
+      this.resultado = this.valor1 + this.valor2;
+    } else if (op == "-") {
+      this.resultado = this.valor1 - this.valor2;
+    } else if (op == "*") {
+      this.resultado = this.valor1 * this.valor2;
+    } else {
+      this.resultado = this.valor1 / this.valor2;
+    }
+  }
+
+  //--30
+
+  nomeexemplo2 = '';
+
+  //--31
+  botao = false;
+  sumirDiv() {
+    this.botao = !this.botao;
+  }
+
+  //--32
+  digitou = "";
+
+  //--33
+  numero = 0;
+
+  //--34
+  campo = '';
+
+  //--lista1 35
+
+  nomeAparecer = ''
+  sobrenomeAparecer = ''
+
+  //--36
+
+  msgUser = '';
+
+  aparecerMsg() {
+    return alert(this.msgUser);
+  }
 
 
-//--
-digitou="";
 
-//--
-numero=0;
+  //-- 37
 
-
-//--
-campo ='';
-
-//--lista1
-
-nomeAparecer=''
-sobrenomeAparecer=''
-
-//-- 
-
-nomePersonagem ='';
+  nomePersonagem = '';
 
 
-perso1='pikachu';
-perso2='charmander';
-perso3='bulbassauro';
+  perso1 = 'pikachu';
+  perso2 = 'charmander';
+  perso3 = 'bulbassauro';
 
-//--
+  //--38
 
-contador ='';
+  contador = '';
 
-contagem(contador: string)
-{
-  return contador.length;
-}
+  contagem(contador: string) {
+    return contador.length;
+  }
 
-//--
+  //--39
 
-nomeSocial = '';
-nomeUsuario='';
+  nomeSocial = '';
+  nomeUsuario = '';
 
-//--
+  //--40
 
-logomarca='';
+  logomarca = '';
 
-//--ngFor
+  //--ngFor
 
-arrayBichos = ['Cachorro', 'Gato', 'Tartaruga', 'Pássaro'];
+  //--41
+  arrayBichos = ['Cachorro', 'Gato', 'Tartaruga', 'Pássaro'];
+  //--42
+  arrayObj = ['Celular', 'Notebook', 'Computador', 'Garrafa', 'Mouse', 'Caneca'];
+  //--43
+  arrayFilmes = ['Parasita', 'Ex_Machina', 'Divertida Mente', 'Forrest Gump'];
+  arrayNotas = [10, 7, 9, 8];
+  //--44
+  arrayFilm = ['Os Vingadores', 'Os 3 patetas', 'Batman', 'SuperMan', 'IT a coisa', 'Carros'];
+  //--45
+  vetorFilme = ['batman', 'hulk', 'superman'];
+  //--46
+  vetorPais = ['Brasil', 'EUA', 'Espanha', 'Irlanda'];
 
-arrayObj = ['Celular','Notebook','Computador','Garrafa','Mouse','Caneca'];
-
-arrayFilmes = ['Parasita', 'Ex_Machina', 'Divertida Mente', 'Forrest Gump'];
-arrayNotas = [10, 7, 9, 8];
-
-arrayFilm = ['Os Vingadores','Os 3 patetas','Batman','SuperMan','IT a coisa','Carros'];
-
-vetorFilme = ['batman','hulk','superman'];
-
-vetorPais = ['Brasil','EUA','Espanha','Irlanda'];
-
-mostrarPais()
-{
-  return alert(this.vetorPais[1]);
-}
+  mostrarPais() {
+    return alert(this.vetorPais[1]);
+  }
 
 }

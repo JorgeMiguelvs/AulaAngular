@@ -1,54 +1,65 @@
+<!-- 1 -->
 <p>{{somar(10,19)}}</p>
 
 <hr>
-
+<!-- 2 -->
 <div> musica: {{musica | uppercase}}</div>
 <div> autor: {{autor | uppercase}}</div>
-<div> album: {{album | uppercase
-    }}</div>
+<div> album: {{album | uppercase}}</div>
 
 <hr>
-
+<!-- 3 -->
 <p [class]="classeCss"> Texto aleatório </p>
 
 <button (click)="mudarCor()">Mudar a cor</button>
 
 
 <hr>
-
+<!-- 4 -->
 {{nome +' '+sobrenome}}
 
 <hr>
-
+<!-- 5 -->
 <div>{{maisculo('carnaval')}}</div>
 
 <hr>
-
-<h1 class="pais">{{maisculo('alemanha')}}</h1>
+<!-- 6 -->
+<h5>input disable</h5>
+<input [disabled]="disableInput">
 
 <hr>
-<h5></h5>
+<!-- 7 -->
+<h5>alert para keypress</h5>
+<input type="text" (keypress)="apertou()">
+
+<hr>
+<!-- 8 -->
+<h1 [class]="paisC">{{maisculo('alemanha')}}</h1>
+
+<hr>
+<!-- 9 -->
 <button [class]="corBtn" (click)="mudarCorBtn()">Mudar Cor Butão</button>
 
 <hr>
-
+<!-- 10 -->
 <div class="texto">
-{{texto}}
+    {{texto}}
 </div>
 
 <hr>
-<!-- Falta terminar -->
+<!-- Falta terminar 11-->
 <h5>add texto div</h5>
-<button >Clique Add Text</button>
+<button>Clique Add Text</button>
 
 <hr>
-<!-- Falta terminar -->
+<!-- Falta terminar 12-->
 <h5>apertar btn e aparecer nome</h5>
 
 <button (click)="mostrarName()">BOTÃO</button>
-<div>{{aparecerName}}</div>
+<input [disabled]="disableInput" value="{{aparecerName}}">
 
 <hr>
+<!-- 13 -->
 <h5>Trocar cor botão</h5>
 <div [class]="mudarFundo">.
 </div>
@@ -57,84 +68,75 @@
 <button (click)="trocarBlue()">Blue</button>
 
 <hr>
-
+<!-- 14 -->
 <h5>Trocar de cor passando o mouse</h5>
 <div [class]="mudouCor" (mouseenter)="passou()">Passa o mouse em mim</div>
 
 
 <hr>
-
+<!-- 15 -->
 <h5>Trocar de Estado</h5>
 
 <h1 class="estado">{{estado}}</h1>
 <button (click)="mudarEstado()">Button</button>
 
 <hr>
-
+<!-- 16 -->
 <h1 [class]="h1style">Teste de porperty bindind</h1>
 
 <hr>
-<!-- falta terminar / ngmodel -->
+<!-- falta terminar / ngmodel 17-->
 <input type="text" [(ngModel)]="usuario">
-<button >Click Aqui</button>
+<button>Click Aqui</button>
 
 <hr>
-
+<!-- 18 -->
 <button [class]="btnColor" (click)="btnCor()">Muda minha cor ai</button>
 
 <hr>
-
+<!-- 19 -->
 <h1 [class]="pais">{{pais | uppercase}}</h1>
 <button (click)="mudarPais()">Trocar de pais</button>
 
 <hr>
-
+<!-- 20 -->
 <img [src]="imagem">
 
 <button (click)="trocarImg()">Trocar Imagem</button>
 
 <hr>
-<h5>aparecer alert pos CLICK IN botão</h5>
-<input type="text" [(ngModel)]="msgUser">
 
-<button (click)="aparecerMsg()">butão</button>
-
-
-<hr>
-
-<!-- ng  model + interpoalçao -->
+<!-- ng  model + interpoalçao 21-->
 <input type="text" [(ngModel)]="aparecer">
 <p>{{aparecer}}</p>
 
 <hr>
-
-Digite um valor: 
-<input type="number" [(ngModel)]="n1" > <br>
-Digite um valor: 
-<input type="number" [(ngModel)]="n2" >
+<!-- 22 -->
+Digite um valor:
+<input type="number" [(ngModel)]="n1"> <br>
+Digite um valor:
+<input type="number" [(ngModel)]="n2">
 
 <p>A soma é: {{n1+n2}}</p>
 
 <hr>
-
+<!-- 23 -->
 Digite uma raça:
 <input type="text" [(ngModel)]="dog">
-<img src="{{'/assets/'+ dog + '.jpg'}} "alt="">
+<img src="{{'/assets/'+ dog + '.jpg'}} " alt="">
 
 <hr>
-
+<!-- 24 -->
 <select [(ngModel)]="cidade">
-    <option value=
-    "saopaulo">São Paulo</option>
+    <option value="saopaulo">São Paulo</option>
     <option value="santos">Santos</option>
     <option value="campinas">Campinas</option>
-    <option value=
-    "sorocaba">Sorocaba</option>
-    </select>
-    <p>{{cidade}}</p>
+    <option value="sorocaba">Sorocaba</option>
+</select>
+<p>{{cidade}}</p>
 
-    <hr>
-
+<hr>
+<!-- 25 -->
 <input id="enviar-email" type="checkbox" [(ngModel)]="email" />
 <label for="enviar-email">Enviar E-mail</label>
 <input id="contato-telefonico" type="checkbox" [(ngModel)]="contTel" />
@@ -143,98 +145,100 @@ Digite uma raça:
 <p>Telefone: {{contTel}}</p>
 
 <hr>
-
+<!-- 26 -->
 <p>
-    <input type="radio" value="masc" id="gen-masc" [(ngModel)]="genero" >
+    <input type="radio" value="masc" id="gen-masc" [(ngModel)]="genero">
     <label for="gen-masc">Masculino</label>
-    <input type="radio" value="fem" id="gen-fem" [(ngModel)]="genero" >
+    <input type="radio" value="fem" id="gen-fem" [(ngModel)]="genero">
     <label for="gen-fem">Feminino</label>
-    <input type="radio" value="out" id="gen-out" [(ngModel)]="genero" >
+    <input type="radio" value="out" id="gen-out" [(ngModel)]="genero">
     <label for="gen-out">Outro</label>
-    </p>
-    <p>Gênero: {{genero}}</p>
+</p>
+<p>Gênero: {{genero}}</p>
 
 <hr>
-
-Seu nome:<input type="text" [(ngModel)]="candidato" > 
+<!-- 27 -->
+Seu nome:<input type="text" [(ngModel)]="candidato">
 <br>
 <select [(ngModel)]="curso">
     <option value="adm">adm</option>
     <option value="ti">ti</option>
     <option value="engenharia">engenharia</option>
     <option value="farmacia">farmacia</option>
-    </select>
-    <p *ngIf="candidato !=='' && curso !== ''">{{candidato +' o curso selecionado foi '+curso}}</p>
+</select>
+<p *ngIf="candidato !=='' && curso !== ''">{{candidato +' o curso selecionado foi '+curso}}</p>
 
 <hr>
-
-Digite seu nome: <input type="text" [(ngModel)]="exemplonome" >--   
+<!-- 28 -->
+Digite seu nome: <input type="text" [(ngModel)]="exemplonome">--
 <span>{{exemplonome | uppercase}}</span>
 
 --<button (click)="mudarNome()">Mudar Nome</button>
 
 <hr>
-
+<!-- 29 -->
 <h5>calculadora</h5>
 Valor 1
 <input type="number" [(ngModel)]="valor1"> <span>{{valor1}}</span>
 Valor 2
 <input type="number" [(ngModel)]="valor2"><span>{{valor2}}</span><br>
 
-<input *ngIf=" valor1 or valor2 !=''" (click)="operacao('+') " type="radio" value="+" [(ngModel)]="operacao" >
-    <label for="gen-masc">+</label>
-    <input  *ngIf=" valor1 or valor2 !=''" (click)="operacao('-') "  type="radio" value="-"  [(ngModel)]="operacao" >
-    <label for="gen-fem">-</label>
-    <input *ngIf=" valor1 or valor2 !=''" (click)="operacao('*') "  type="radio" value="*"  [(ngModel)]="operacao" >
-    <label for="gen-out">*</label>
-    <input *ngIf=" valor1 or valor2 !=''" (click)="operacao('/') "  type="radio" value="/"  [(ngModel)]="operacao" >
-    <label for="gen-out">/</label><br>
+<input *ngIf=" valor1 or valor2 !=''" (click)="operacao('+') " type="radio" value="+" [(ngModel)]="operacao">
+<label for="gen-masc">+</label>
+<input *ngIf=" valor1 or valor2 !=''" (click)="operacao('-') " type="radio" value="-" [(ngModel)]="operacao">
+<label for="gen-fem">-</label>
+<input *ngIf=" valor1 or valor2 !=''" (click)="operacao('*') " type="radio" value="*" [(ngModel)]="operacao">
+<label for="gen-out">*</label>
+<input *ngIf=" valor1 or valor2 !=''" (click)="operacao('/') " type="radio" value="/" [(ngModel)]="operacao">
+<label for="gen-out">/</label><br>
 
-Resultado:<input type="text"[(ngModel)]="resultado">
+Resultado:<input type="text" [(ngModel)]="resultado">
 
 
 <hr>
-
+<!-- 30 -->
 <h5>exemplo do slide</h5>
 exemplo 1
 <input type="text" [(ngModel)]="nomeexemplo2">
 <p *ngIf="nomeexemplo2">
-Nome: {{nomeexemplo2}}
+    Nome: {{nomeexemplo2}}
 </p>
 
 <hr>
+<!-- 31 -->
 <h5>sumir div</h5>
-<button (click)="sumirDiv()">Botão Sumir Div</button>  
+<button (click)="sumirDiv()">Botão Sumir Div</button>
 <div *ngIf="botao" class="sumir">
- 
+
 </div>
 
 <hr>
+<!-- 32 -->
 <h5>digitou</h5>
 <input [(ngModel)]="digitou">
 
-<img *ngIf="digitou !==''" width="100px"src='assets/img1.jpg'>
+<img *ngIf="digitou !==''" width="100px" src='assets/img1.jpg'>
 
 <hr>
-
-<input  type="number" [(ngModel)]="numero">
+<!-- 33 -->
+<input type="number" [(ngModel)]="numero">
 <div *ngIf="numero>0">numero positivo</div>
 <div *ngIf="numero<0">numero negativo</div>
 <div *ngIf="numero==0">numero igual a 0</div>
 
 <hr>
-
+<!-- 34 -->
 <select [(ngModel)]="campo">
     <option value="zap">WhatsApp</option>
     <option value="email">E-mail</option>
 </select><br>
 <br>
-<input *ngIf="campo=='zap'" type="number"  placeholder="WhatsApp">
+<input *ngIf="campo=='zap'" type="number" placeholder="WhatsApp">
 <input *ngIf="campo=='email'" type="mail" placeholder="E-mail">
 
 <hr>
 
-<!-- lista1 - ngIf -->
+<!-- lista1 - ngIf 35 -->
 <h5>concatenação de nome e sobrenome</h5>
 Nome:<input type="text" [(ngModel)]="nomeAparecer"><br>
 Sobrenome:<input type="text" [(ngModel)]="sobrenomeAparecer">
@@ -242,20 +246,27 @@ Sobrenome:<input type="text" [(ngModel)]="sobrenomeAparecer">
 <div *ngIf="nomeAparecer !=='' && sobrenomeAparecer!==''">{{nomeAparecer+' '+sobrenomeAparecer}}</div>
 
 <hr>
+<!-- 36 -->
+<h5>aparecer alert pos CLICK IN botão</h5>
+<input type="text" [(ngModel)]="msgUser">
 
+<button (click)="aparecerMsg()">butão</button>
+
+<hr>
+<!-- 37 -->
 <h5>fale um pokemon</h5>
 <input type="text" [(ngModel)]="nomePersonagem">
 <img *ngIf="nomePersonagem !== perso1 || perso2 || perso3" src="{{'assets/' + nomePersonagem + '.png'}}">
 <p>{{nomePersonagem}}</p>
 
 <hr>
-
+<!-- 38 -->
 <h5>contador de caractere</h5>
 <input type="text" [(ngModel)]="contador">
 <div *ngIf="contador !==''">Digitos: {{contagem(contador)}}</div>
 
 <hr>
-<!-- falta terminar -->
+<!-- falta terminar 39-->
 Nome: <input type="text" [(ngModel)]="nomeSocial"><br>
 Nome Usuário: <input type="text" [(ngModel)]="nomeUsuario"><br>
 
@@ -268,6 +279,7 @@ Nome Usuário: <input type="text" [(ngModel)]="nomeUsuario"><br>
 <button>Confirmar</button>
 
 <hr>
+<!-- 40 -->
 <h5>Logomarca Select</h5>
 
 <select [(ngModel)]="logomarca">
@@ -276,11 +288,11 @@ Nome Usuário: <input type="text" [(ngModel)]="nomeUsuario"><br>
     <option value="telegram">Telegram </option>
 </select>
 
-<img *ngIf="logomarca !=='' "width="30px" src="assets/{{logomarca}}.png">
+<img *ngIf="logomarca !=='' " width="30px" src="assets/{{logomarca}}.png">
 
 <hr>
 
-<!-- lista ngFor -->
+<!-- lista ngFor 41 -->
 
 <ul>
     <li *ngFor="let animal of arrayBichos; let i = index;">{{i}} {{animal}}
@@ -288,45 +300,41 @@ Nome Usuário: <input type="text" [(ngModel)]="nomeUsuario"><br>
 </ul>
 
 <hr>
-
+<!-- 42 -->
 <div>
     <p *ngFor="let objetos of arrayObj; let i = index;">{{i}}-{{objetos}}</p>
 </div>
 
 <hr>
+<!-- 43 -->
 <h5>exemplo</h5>
-<table border="1" >
+<table border="1">
     <tr *ngFor="let filme of arrayFilmes; let i = index;">
-    <td>{{filme}}</td>
-    <td>{{arrayNotas[i]}}</td>
+        <td>{{filme}}</td>
+        <td>{{arrayNotas[i]}}</td>
     </tr>
-    </table>
+</table>
 
 <hr>
-
+<!-- 44 -->
 <ol>
     <li *ngFor="let filmes of arrayFilm; ">{{filmes}}</li>
 </ol>
 
 <hr>
+<!-- 45 -->
 <ul>
     <li *ngFor="let films of vetorFilme"> {{films}}
         <img src="assets/{{films}}.jpg">
     </li>
-    
+
 </ul>
 
 <hr>
-<!-- falta terminar -->
+<!-- falta terminar 46 -->
 <ul>
     <li *ngFor="let pais of vetorPais"> <button (click)="mostrarPais"> {{pais}}</button>
     </li>
-    
+
 </ul>
 <hr>
-
-
-
-
-
-
