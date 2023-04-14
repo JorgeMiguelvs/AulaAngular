@@ -86,7 +86,6 @@ export class StudyComponent {
 
   mostrarName() {
     this.disableInput = !this.disableInput;
-    this.aparecerName = this.aparecerName;
   }
 
   //--13
@@ -181,10 +180,15 @@ export class StudyComponent {
     if (this.imagem == 'assets/img1.jpg') {
       this.imagem = 'assets/img2.jpg'
     }
-    else {
+    else if (this.imagem =='assets/img2.jpg') {
       this.imagem = 'assets/img3.jpg'
+    } else if(this.imagem == 'assets/img3.jpg')
+    {
+      this.imagem = 'assets/img1.jpg';
     }
-  }
+
+    }
+  
 
   //--21
 
@@ -198,8 +202,7 @@ export class StudyComponent {
   //--23
 
   dog = '';
-  pincher = '';
-  labrador = '';
+
 
   //--24
 

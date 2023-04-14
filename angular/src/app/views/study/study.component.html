@@ -56,7 +56,8 @@
 <h5>apertar btn e aparecer nome</h5>
 
 <button (click)="mostrarName()">BOTÃO</button>
-<input [disabled]="disableInput" value="{{aparecerName}}">
+<input [disabled]="disableInput" [(ngModel)]="aparecerName">
+<input type="text" >
 
 <hr>
 <!-- 13 -->
@@ -100,7 +101,7 @@
 
 <hr>
 <!-- 20 -->
-<img [src]="imagem">
+<img [src]="imagem" width="100px" height="100px">
 
 <button (click)="trocarImg()">Trocar Imagem</button>
 
@@ -137,10 +138,10 @@ Digite uma raça:
 
 <hr>
 <!-- 25 -->
-<input id="enviar-email" type="checkbox" [(ngModel)]="email" />
-<label for="enviar-email">Enviar E-mail</label>
-<input id="contato-telefonico" type="checkbox" [(ngModel)]="contTel" />
-<label for="Contato Telfônico">Entrar em Contato por Telefone</label>
+<input type="checkbox" [(ngModel)]="email" />
+<label >Enviar E-mail</label>
+<input  type="checkbox" [(ngModel)]="contTel" />
+<label >Entrar em Contato por Telefone</label>
 <p>Email: {{email}}</p>
 <p>Telefone: {{contTel}}</p>
 
@@ -170,18 +171,17 @@ Seu nome:<input type="text" [(ngModel)]="candidato">
 
 <hr>
 <!-- 28 -->
-Digite seu nome: <input type="text" [(ngModel)]="exemplonome">--
-<span>{{exemplonome | uppercase}}</span>
+Digite seu nome: <input type="text" [(ngModel)]="exemplonome">
 
---<button (click)="mudarNome()">Mudar Nome</button>
+<button (click)="mudarNome()">Mudar Nome</button>
 
 <hr>
 <!-- 29 -->
 <h5>calculadora</h5>
 Valor 1
-<input type="number" [(ngModel)]="valor1"> <span>{{valor1}}</span>
+<input type="number" [(ngModel)]="valor1"> 
 Valor 2
-<input type="number" [(ngModel)]="valor2"><span>{{valor2}}</span><br>
+<input type="number" [(ngModel)]="valor2"><br>
 
 <input *ngIf=" valor1 or valor2 !=''" (click)="operacao('+') " type="radio" value="+" [(ngModel)]="operacao">
 <label for="gen-masc">+</label>
