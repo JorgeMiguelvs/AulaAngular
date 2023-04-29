@@ -1,0 +1,9 @@
+<h1>Exercico 4</h1>
+<select [(ngModel)]="tipoContato">
+    <option value="zap">Zap</option>
+    <option value="email">Email</option>
+</select>
+
+
+<input *ngIf="tipoContato =='email'" type="email" placeholder="email">
+<input *ngIf="tipoContato =='zap'" type="tel" placeholder="tel">

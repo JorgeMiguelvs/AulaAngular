@@ -1,0 +1,74 @@
+.vermelho {
+    background-color: red;
+    color: white;
+}
+
+.azul {
+    background-color: blue;
+    color: green;
+}
+
+
+.cssPais {
+    color: red;
+    background-color: yellow;
+    border-color: black;
+    }
+
+
+    .alemanha{
+        color:orange;
+        font-weight: bold;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+    
+      .brasil {
+        color: rgb(251, 255, 0);
+        font-style: italic;
+        background-color: blue;
+        border: 1px solid green;
+      }
+
+
+      .sumir {
+        
+          width: 100px;
+          height:100px;
+          background-color: red;
+        
+      }
+
+      .mudarFundo{background-color: gray;}
+
+      .red{
+        background-color: red;
+
+      }
+      .green{
+        background-color: green;
+      }
+
+      .blue{
+        background-color: rgb(33, 33, 209);
+      }
+
+      .h1{
+        background-color: lightsalmon;
+        font-size: larger;
+        font-family: cursive;
+        border-color: blueviolet;
+      }
+
+
+      .sp{
+        color: red;
+        font-size: xx-large;
+        font-family: cursive;
+      }
+      .rio{
+        color: gold;
+        font-size: xx-large;
+        font-family: cursive;
+      }
+      
