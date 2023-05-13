@@ -1,0 +1,16 @@
+{
+  "produto": [
+    {
+      "nome": "Air Force 1",
+      "codigo": 564584,
+      "tipo": "Tênis",
+      "id": 1
+    },
+    {
+      "nome": "Jordan Royale",
+      "codigo": 151489,
+      "tipo": "Tênis",
+      "id": 2
+    }
+  ]
+}
