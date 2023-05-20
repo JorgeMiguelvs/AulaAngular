@@ -1,6 +1,6 @@
 export class produto{
-  nom='';
+  nome='';
   codigo = '';
   tipo='';
-    id='';
+  id=0;
 }

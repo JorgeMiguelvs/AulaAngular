@@ -1,0 +1,27 @@
+<p>Listar</p>
+<button (click)="listar()">Listar</button>
+
+<ul>
+  <li *ngFor="let produto of listaProdutos">
+    <span (click)="selecionar(produto)">{{produto.nome}}</span>
+    <span (click)="remover(produto.id)">X</span>
+  </li>
+</ul>
+
+
+<p>Cadastrar</p>
+Nome
+<input type="text" [(ngModel)]="produto.nome">
+<br>
+Código
+<input type="text" [(ngModel)]="produto.codigo">
+<br>
+Tipo
+<input type="text" [(ngModel)]="produto.tipo">
+<br>
+<button (click)="salvar()">Salvar</button>
+<button (click)="cancelar()">Cancelar</button>
+
+
+
+

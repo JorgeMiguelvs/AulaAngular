@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { produto } from '../model/produto';
 
 
@@ -12,23 +13,24 @@ export class ClienteService {
 
 
    }
+   //observable chamada em paralelo
 
-  listar(){
+  listar():Observable<produto[]>{
   return this.http.get<produto[]>('http://localhost:3000/produto');
   }
 
-  inserir(produto:produto){
+  inserir(produto:produto):Observable<produto>{
   return this.http.post<produto>('http://localhost:3000/produto',produto);
 
   }
 
-  atualizar(produto:produto){
-   this.http.put<produto>(`http://localhost:3000/produto/${produto.id}`,produto);
+  atualizar(produto:produto):Observable<produto>{
+   return this.http.put<produto>(`http://localhost:3000/produto/${produto.id}`,produto);
 
   }
 
-  apagar(){
-    this.http.delete<produto>(`http://localhost:3000/produto/${produto.id}`);
+  apagar(id:number):Observable<any>{
+    return this.http.delete(`http://localhost:3000/produto/${id}`);
   }
 
 }
