@@ -1,3 +1,16 @@
 {
-  "produto": []
+  "produto": [
+    {
+      "nome": "Nike",
+      "codigo": "141895",
+      "tipo": "Tenis",
+      "id": 1
+    },
+    {
+      "nome": "Adidas",
+      "codigo": "165165",
+      "tipo": "Tenis",
+      "id": 2
+    }
+  ]
 }

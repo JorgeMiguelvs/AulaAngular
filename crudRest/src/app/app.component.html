@@ -1,1 +1,25 @@
-<app-produto></app-produto>
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>
+                menu
+            </mat-icon>
+        </button>
+        Gestor de Produto
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+   <mat-sidenav #sidenav mode="push" [opened]="true"> <!-- # para dar id -->
+            <mat-list>
+                <a mat-list-item routerLink="produto">Produto</a>
+                <a mat-list-item routerLink="sobre">Sobre</a>
+            </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="min-height: calc(100vh - 64px)">
+        <mat-card>
+            <router-outlet></router-outlet>
+        </mat-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
